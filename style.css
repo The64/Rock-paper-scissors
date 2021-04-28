@@ -1,0 +1,225 @@
+*{
+    font-family: sans-serif;
+    color: white;
+}
+
+::placeholder{
+    color: rgb(235, 231, 231);
+}
+
+:focus{
+    outline: none;
+}
+
+::-webkit-scrollbar{
+    width: 0px;
+}
+
+body{
+    background: #222;
+
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+
+
+}
+
+.start, .end{
+    width: 20%;
+    height: 100vh;
+
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.start{
+    background-color: royalblue;
+}
+
+.end{
+    
+    background-color: rgb(138, 71, 255);
+}
+
+input{
+    background: none;
+    border: solid 2px black;
+    border-radius: 10px;
+    padding: 6px;
+}
+
+        input:hover{
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+.input{
+    position: absolute;
+    top: 40px;
+}
+
+
+
+.btn{
+    position: absolute;
+    top: 80px;
+
+    letter-spacing: 2px;
+}
+
+        .btn:active{
+            background: black;
+        }
+
+.start h2, .end h2{
+    padding-bottom: 70px;
+}
+
+.table{
+
+    width: 90%;
+    height: 250px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+
+    gap: 10px;
+
+}
+
+.squares{
+    border: solid 4px rgba(0, 0, 0, 0.605);
+    border-radius: 15px;
+    background-color: #333;
+}
+
+
+
+.middle{
+    width: 60%;
+    height: 100vh;
+
+    display: flex;    
+    
+    justify-content: space-between;
+    align-items: center;
+}
+
+.middle-start, .middle-end{
+ 
+    width: 20%;
+    height: 600px;
+
+    margin: 0px 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.middle-middle{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    flex-direction: column;
+
+    
+    width: 400px;
+    height: 100%;
+}
+
+.selecting-container{
+
+    width: 100%;
+    height: 150px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 54px;
+}
+
+.selecting{
+    background-color: rgb(255, 255, 255);
+
+    width: 75%;
+    height: 100%;
+
+    border: solid 4px magenta;
+    border-radius: 20px;
+}
+
+.vs-selecting img{
+    width: 200px;
+}
+
+.btn-game{
+    width: 100%;
+    height: 30%;
+    border: solid 4px rgb(255, 115, 0);
+    border-radius: 20px;
+}
+
+        .btn-game:hover{
+            background-color: rgb(255, 193, 136)
+        }
+
+        .btn-game:active{
+            background-color: rgb(255, 115, 0);
+        }
+
+.btn-game img{
+    transform: scale(.8);
+}
+
+.who-wins{
+    color: #222;
+    font-size: 40px;
+    font-style: italic;
+
+    background-color: rgba(255, 255, 255, 0.102);
+
+    margin-top: 40px;
+    user-select: none;
+}
+
+.animation-win{
+    animation-name: animation-win-;
+    animation-duration: .5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-fill-mode:both;
+}
+
+@keyframes animation-win- {
+    0%{
+        color: green;
+        text-shadow: 4px 4px black;
+    }
+
+    25%{
+        color: blue;
+    }
+
+    50%{
+        color: magenta;
+        text-shadow: -5px -5px black;
+    }
+
+    75%{
+        color: red;
+    }
+
+    100%{
+        color: orange;
+        text-shadow: 4px 4px black;
+    }
+
+}
